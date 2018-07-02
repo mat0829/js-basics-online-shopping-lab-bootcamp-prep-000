@@ -35,7 +35,7 @@ function viewCart() {
 function total() {
   var totalValue = 0;
   var i = 0;
-  while (i < cart.length) {
+  while (i <= cart.length) {
       if (i < cart.length) {
         totalValue = totalValue + cart[i].itemPrice;
        i++;
@@ -62,11 +62,13 @@ function placeOrder(cardNumber) {
     var totalValue = 0;
     var i = 0;
     while (i < cart.length) {
+       
         totalValue = totalValue + cart[i].itemPrice;
        i++;
   }
-  return "Your total cost is $" + totalValue + ", which will be charged to the card " + cardNumber + ".";
+  cart = [];
   
+  return "Your total cost is $" + totalValue + ", which will be charged to the card " + cardNumber + ".";
 }
-  var cart = [];
+
 }
